@@ -104,6 +104,7 @@ class SpeechApiSample
 		$this->apiName = $apiName;
 		$signMsg = $this->preSignMsg();
 		$url = $this->preRequestUrl($seqValue, $signMsg);
+		$url.= "&stop=1";
 		echo $url;
     
 		// Send HTTP GET request to get speech recognition result by cURL
