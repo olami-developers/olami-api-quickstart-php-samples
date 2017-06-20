@@ -70,7 +70,7 @@ class NluApiSample
 	 * Prepare message to generate an MD5 digest.
 	 */
 	private function preSignMsg () {
-		$timestamp = time();
+		$timestamp = round(microtime(true) * 1000);
 		$msg = '';
 		$msg .= $this->appSecret;
 		$msg .= 'api=';
@@ -90,7 +90,7 @@ class NluApiSample
 	 * Request NLU service by HTTP POST
 	 */
 	private function preRequestUrl ($input, $signMsg) {
-		$timestamp = time();
+		$timestamp = round(microtime(true) * 1000);
 		$url = '';
 		$url .= $this->apiBaseUrl .'?';
 		$url .= 'appkey='. $this->appKey;
