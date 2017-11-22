@@ -92,8 +92,8 @@ class NluApiSample
 	private function preRequestUrl ($input, $signMsg) {
 		$timestamp = round(microtime(true) * 1000);
 		$url = '';
-		$url .= $this->apiBaseUrl .'?';
-		$url .= 'appkey='. $this->appKey;
+		$url .= $this->apiBaseUrl .'?_from=php';
+		$url .= '&appkey='. $this->appKey;
 		$url .= '&api=';
 		$url .= $this->apiName;
 		$url .= '&timestamp='. $timestamp;
